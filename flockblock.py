@@ -125,7 +125,7 @@ def learnbutton(latlonlist, currentlat, currentlon):
 
 ##############################################################
 
-lllist = '/home/charlie/latlon.csv' # Path to lat,lon list
+lllist = '/home/user/latlon.csv' # Path to lat,lon list
 flockradius = 0.1 # Radius to block (km)
 
 GPIO.setmode(GPIO.BCM) # Set to Broadcom numbers (not pin numbers)
