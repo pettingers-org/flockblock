@@ -36,7 +36,7 @@ RPI_LGPIO_REVISION="800012" python flockblock.py
 
 #----- Executing on newer Raspberry Pi does not require passing environment
 
-  python flockblock.py
+python flockblock.py
 
 #----- Test GPS receiver with: 
 
@@ -46,13 +46,13 @@ cgps -s
 
 #----- Set up as a Service to run on boot
 
-     Define flockblock.service in /etc/systemd/system.  *ADJUST user and path appropriately.*
+Define flockblock.service in /etc/systemd/system.  *ADJUST user and path appropriately.*
 
 [Unit]
 Description=Flock Blocking
 After=network.target
 [Service]
-# Environment=RPI_LGPIO_REVISION="800012" # for Pi 1
+Environment=RPI_LGPIO_REVISION="800012" # only for Pi 1
 ExecStart=/usr/bin/python3 /home/pi/path 
 WorkingDirectory=/home/pi/path/ 
 Restart=always
@@ -62,7 +62,7 @@ StandardError=syslog
 [Install]
 WantedBy=multi-user.target
 
-     Enable and start service
+Enable and start the service
 
 sudo systemctl daemon-reload 
 sudo systemctl enable flockblock.service 
