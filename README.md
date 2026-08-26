@@ -21,6 +21,20 @@ USB receiver.  Should work with any GPS receiver than can be polled by gpsd.
 
 See baremetal file for step-by-step process from a fresh Pi OS install.  
 
+Operational notes:  
+The learn switch (momentary) should be held until the learn LED starts flashing,  
+and then released.  This should, within a few seconds, trigger a blocked condition  
+and the blocking LED should come on.  This is because your location is now within  
+the geofence for the location you just saved with the learn button.  Unless your  
+vehicle is moving at the speed of light.  
+
+You will not be able to record another waypoint until you move away from the one  
+you just added (outside any geofence location).  
+
+Of course you can manually add lat/lon data to the CSV file.  You do not need to  
+use only the learn button.  You can do this while the flockblock.py script is  
+running.  Currently the only way to remove a waypoint is manually with a text  
+editor.
 
 #----- install required modules and (optional) helpers  
 sudo apt install python3 gpsd gpsd-clients python-is-python3 python3-geopy python3-pandas locate vim python3-gps  
