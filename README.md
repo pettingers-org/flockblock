@@ -17,7 +17,7 @@ Has been tested on RPi 1 (B+), RPi 2, and RPi 3 running 32-bit Pi OS Lite (Trixi
 but should run on older distributions.  See below for modules and configuration.  
 Should also work on RPi 4 but it is overkill.  Has been tested with Adafruit  
 "Ultimate GPS" serial receiver, u-blox 7 chipset USB receiver, and u-blox 8 chipset  
-USB receiver.  Should work with any GPS receiver than can be polled by gpsd.  
+USB receiver.  Should work with any GPS receiver that can be polled by gpsd.  
 
 See baremetal file for step-by-step process from a fresh Pi OS install.  
 
