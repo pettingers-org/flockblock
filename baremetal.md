@@ -90,7 +90,7 @@ below the functions (def) and separated with hash marks.
 ##############################################################  
 
 lllist = '/home/user/latlon.csv' # Path to lat,lon list  
-flockradius = 0.1 # Radius to block (km)  
+flockradius = 0.2 # Radius to block (km)  
 
 </b>
 <br>
@@ -104,7 +104,8 @@ python flockblock.py
 </b>
 <br>
 <br>
-IMPORTANT: for a first generation Pi (B+) you need to pass an environment variable  
+IMPORTANT: for a first(ish) generation Pi (aka B+) you need to pass an environment variable  
+when executing the code.
 <br>
 <br>
 <b>
@@ -131,10 +132,10 @@ Description=Flock Blocking
 After=network.target  
 [Service]  
 Environment=RPI_LGPIO_REVISION="800012" # Only needed for Pi 1  
-ExecStart=/usr/bin/python3 /home/pi/path  
-WorkingDirectory=/home/pi/path/  
+ExecStart=/usr/bin/python3 /home/user/path/flockblock.py  
+WorkingDirectory=/home/user/path/  
 Restart=always  
-User=pi  
+User=user  
 StandardOutput=syslog  
 StandardError=syslog  
 [Install]  
