@@ -67,10 +67,10 @@ Description=Flock Blocking
 After=network.target  
 [Service]  
 Environment=RPI_LGPIO_REVISION="800012" # only for Pi 1  
-ExecStart=/usr/bin/python3 /home/pi/path   
-WorkingDirectory=/home/pi/path/   
+ExecStart=/usr/bin/python3 /home/user/path/flockblock.py   
+WorkingDirectory=/home/user/path/   
 Restart=always  
-User=pi  
+User=user  
 StandardOutput=syslog  
 StandardError=syslog  
 [Install]  
